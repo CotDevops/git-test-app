@@ -79,17 +79,52 @@
             transform: scale(1);
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
+        .styled-heading {
+        font-family: 'Arial', sans-serif;
+        font-size: 3rem;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        background: linear-gradient(45deg, #6a11cb, #2575fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 30px;
+        position: relative;
+        display: inline-block;
+    }
+
+    .styled-heading::before, .styled-heading::after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 4px;
+        background: #2575fc;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .styled-heading::before {
+        left: -60px;
+    }
+
+    .styled-heading::after {
+        right: -60px;
+    }
 </style>
 </head>
 
 <body><form action="">
-    <center><h1>login</h1></center>
+    <div class="py-5">
+    <center><h1 class="styled-heading">Login</h1></center>
+    </div>
 
 <body><form action=""">
     <div class="py-5"></div>
 
 
-    <div class="py-5"></div>
+    
     <div class="container">
     <div class="mb-3 row">
         <label for="" class="col-sm-2 col-form-label">E-mail</label>
